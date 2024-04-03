@@ -21,7 +21,7 @@ namespace ArraysAndLists
              */
 
             var evens = new List<int>();
-            var odds = new List<int>();
+            var odds = new List<int>() ;
 
             /* Using either a foreach or for loop,
             * iterate through the array you populated with 10 numbers.
@@ -33,46 +33,69 @@ namespace ArraysAndLists
 
             foreach (var num in numbers)
             {
+
+                if (num % 2 == 0)
+                {
+                    evens.Add(num);
+                    Console.WriteLine(evens);//return number to the evens list
+                }
+                else
+                {
+                    odds.Add(num);
+                    Console.WriteLine(odds);//return numbers to the odds list
+                }
                 
-                  if (num % 2 == 0)
-                     {
-                    evens.Add(num);  //return number to the evens list
-                     }
-                  else
-                    {
-                    odds.Add(num);  //return numbers to the odds list
-                    }
-
-
             }
 
-
-
+            //foreach (int num in evens)
+            //{
+            //    Console.WriteLine(num);
+            //}
+            //***
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] % 2 == 0) 
+                if (numbers[i] % 2 == 0)
                 {
                     evens.Add(numbers[i]);
+                    Console.WriteLine(evens[i]);
                 }
 
                 else
                 {
                     odds.Add(numbers[i]);
+                    Console.WriteLine(odds[i]);
                 }
-
+                
 
             }
-
+            //***
 
 
             /* Using a foreach loop,
              * display the numbers in your "evens" list
              */
-            
 
+            Console.WriteLine("----EVENS BEGIN------");
+            //***
+            foreach (var num in evens)
+            {
+                Console.WriteLine(num);
+                
+            }
+            Console.WriteLine("----ODDS BEGIN------");
             /* Using a for loop,
              * display the numbers in your "odds" list
              */
+
+            for (int i = 0; i < odds.Count; i++)
+            {
+                Console.WriteLine(odds[i]);
+            }
+            Console.WriteLine("----------");
         }
+        //***
+
+
     }
-}
+    }
+    
